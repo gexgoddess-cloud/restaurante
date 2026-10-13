@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D35FDD20-76FE-44F7-B15F-1A9318BE709C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>restaurante</RootNamespace>
+    <AssemblyName>restaurante</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conta.Designer.cs">
+      <DependentUpon>conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ingredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ingredientes.Designer.cs">
+      <DependentUpon>ingredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sobre.Designer.cs">
+      <DependentUpon>sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela.Designer.cs">
+      <DependentUpon>tela.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="conta.resx">
+      <DependentUpon>conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ingredientes.resx">
+      <DependentUpon>ingredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sobre.resx">
+      <DependentUpon>sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela.resx">
+      <DependentUpon>tela.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fmenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FSplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FTela.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIngredientes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FSobre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bentrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bvoltar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BBingredientes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bsobre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bsair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bfinalizar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bpagar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blimpar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FConta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BML.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infB8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infBe8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infD8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infM8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infP8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infS8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infT8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngB8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngBe8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngD8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngM8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngP8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngS8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IngT8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FTelac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CDc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CMc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CTc.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
