@@ -9,7 +9,7 @@ namespace restaurante
     public partial class Form1 : Form
     {
 
-       
+
         private struct Item
         {
             public string Name;
@@ -24,9 +24,9 @@ namespace restaurante
 
 
         private List<Item> ItemsNow = new List<Item>();
-       
 
-        private List<Item> CakeList = new List<Item>() { 
+
+        private List<Item> CakeList = new List<Item>() {
             new Item("Jardim Encantado da Moranguinho", 35),
             new Item("Brisa Cítrica do Limão", 35),
             new Item("Bosque Azul de Mirtilos", 35),
@@ -35,7 +35,7 @@ namespace restaurante
             new Item("Noite Violeta da Amorinha", 35),
             new Item("Chá de Primavera", 35),
             new Item("Casinha de Mel do Campo", 35),
-            
+
         };
 
         private List<Item> MilkList = new List<Item>() {
@@ -132,6 +132,7 @@ namespace restaurante
         {
             var form = new conta();
             form.FormClosed += (s, args) => this.Show();
+            form.MudarTexto("skajflasdfkjasdlfjaklsdf");
             this.Hide();
             form.Show();
         }
@@ -166,7 +167,7 @@ namespace restaurante
             button7.Visible = true;
 
             player.Stop();
-            
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -221,17 +222,17 @@ namespace restaurante
 
             /*
              * label2.Text = Convert.ToInt32(label2.Text)++.ToString();
-             * 
+             *
              */
 
 
 
         }
 
-        
+
         private void button8_Click(object sender, EventArgs e)
         {
-            
+
             var i = 0;
             var itm = ItemsNow[i];
 
@@ -248,7 +249,7 @@ namespace restaurante
             var i = 1;
             var itm = ItemsNow[i];
 
-            
+
             var form = new ingredientes();
             form.FormClosed += (s, args) => this.Show();
             form.SelectCombobox(itm.Name);
@@ -287,7 +288,7 @@ namespace restaurante
             var i = 4;
             var itm = ItemsNow[i];
 
-            
+
             var form = new ingredientes();
             form.FormClosed += (s, args) => this.Show();
             form.SelectCombobox(itm.Name);
