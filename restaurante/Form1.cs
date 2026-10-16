@@ -132,6 +132,8 @@ namespace restaurante
         {
             var form = new conta();
             form.FormClosed += (s, args) => this.Show();
+
+            form.MudarTexto("vlculefsrehjl");
             this.Hide();
             form.Show();
         }
