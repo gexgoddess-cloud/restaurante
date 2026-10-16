@@ -128,15 +128,51 @@ namespace restaurante
             form.Show();
         }
 
+        private int CalculateItem(List<Item> items, Item item)
+        {
+            int total = 0;
+            foreach (var val in items)
+            {
+                if (val.Name == item.Name)
+                {
+                    total ++;
+                }
+            }
+            return total;
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
+            var result = string.Empty;
+            var total = 0;
+            var alredyAdded = new HashSet<string>();
+            
+
+            foreach (var item in ItemsForPurchase)
+            {
+                if(alredyAdded.Contains(item.Name))
+                {
+                    continue;
+                }
+
+                var count = CalculateItem(ItemsForPurchase, item);
+                result += $"{item.Name}  R$  {item.Value} {count} \r\n";
+                total += count * item.Value;
+
+
+            }
+
             var form = new conta();
             form.FormClosed += (s, args) => this.Show();
 
-            form.MudarTexto("vlculefsrehjl");
+            form.MudarTexto(result);
+            form.Resultadofinal($"{total}");
+
             this.Hide();
             form.Show();
         }
+
+        private string mesa = string.Empty;
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -572,24 +608,32 @@ namespace restaurante
             var i = 0;
             var itm = ItemsNow[i];
 
-            ItemsForPurchase.Append(itm);
-
-           /*  label1.Text = Convert.ToInt32(label1.Text)++.ToString();
-            if (label1.Text == "0")
+            if(label1.Text == "0")
             {
-                //nao alterar valor
-            }else if ( label1.Text >= "1"){
-
-                //valor + 1
+                return;
             }
-            */
 
+            if (ItemsForPurchase.Contains(itm))
+            {
+                ItemsForPurchase.Remove(itm);
+            }
+
+            label1.Text = (Convert.ToInt32(label1.Text) - 1).ToString();
+
+            //diminuir 
 
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
+            var i = 0;
+            var itm = ItemsNow[i];
 
+            ItemsForPurchase.Add(itm);
+
+            label1.Text = (Convert.ToInt32(label1.Text) + 1).ToString();
+
+            //adicionar
         }
     }
 }

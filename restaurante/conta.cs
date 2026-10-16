@@ -21,6 +21,11 @@ namespace restaurante
             label2.Text = texto;
         }
 
+        public void Resultadofinal(string texto)
+        {
+            label3.Text = texto;
+        }
+
         //Botao "Finalizar": encerra o pedido e fecha o aplicativo inteiro.
         private void button1_Click(object sender, EventArgs e)
         {
